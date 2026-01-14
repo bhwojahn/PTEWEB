@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pulse Tobacco — Enterprise</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="TobaccoStrip.js" type="module"></script>
+  <script src="ProcessSteps.js" type="module"></script>
+  <link rel="icon" src="/imgs/symbol.svg"/>
+  
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="site-nav" class="nav">
+    <div class="container nav-inner">
+      <div class="logo" id="home-logo" role="button" tabindex="0">
+        <img src="imgs/Color logo - no background.svg" alt="Pulse Tobacco Enterprise Logo">
+      </div>
+
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation">☰</button>
+
+      <div class="nav-links">
+        <button data-target="tobacco-types" class="nav-btn">Products</button>
+        <button data-target="about" class="nav-btn">Process</button>
+        <button data-target="contact" class="nav-btn">Contact</button>
+        <a href="https://wa.me/971558863357" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="wa-link">
+          <!-- WhatsApp SVG -->
+          <img src="/imgs/icons8-whatsapp.svg" class="icon">
+        </a>
+      </div>
+
+      <div id="mobile-menu" class="mobile-menu" hidden>
+        <a href="#tobacco-types" class="mobile-nav-link">Products</a>
+        <a href="#about" class="mobile-nav-link">Process</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <a href="https://wa.me/971558863357" target="_blank" rel="noopener noreferrer" class="mobile-nav-link">WhatsApp</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="hero" class="hero">
+    <div class="hero-bg"></div>
+    <!-- <div class="hero-overlay"></div> -->
+    <div class="container hero-content">
+      <h1 class="hero-title">Pulse Tobacco Enterprise</h1>
+      <p class="hero-sub">Your Partner in Tobacco</p>
+      <div class="hero-cta">
+        <a href="#tobacco-types" class="btn btn-outline">Our Products</a>
+        <a href="#contact" class="btn btn-solid">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Tobacco Types -->
+  <section id="tobacco-types" class="section tobacco-types">
+    <div class="container">
+      <div class="section-head text-center">
+        <h2>Tobacco Types</h2>
+        <p>Comprehensive range of premium tobacco products from trusted sourcing regions</p>
+      </div>
+      <tobacco-strip></tobacco-strip>
+    </div>
+  </section>
+
+  <!-- About / Process -->
+  <section id="about" class="section about-process">
+    <div class="container">
+      <div class="section-head">
+        <h2>About Us</h2>
+        <p>Pulse Tobacco Enterprise FZ-LLC, founded in December 2024, is a trusted global supplier of tobacco, connected with the world's most discerning tobacco manufacturers.</p>
+      </div>
+      <process-steps></process-steps>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-head text-center">
+        <h2>Contact</h2>
+        <p>Get in touch for inquiries about our products and services</p>
+      </div>
+      <form id="contact-form" class="contact-form" novalidate>
+        <div class="field"><label for="name">Name *</label><input id="name" name="name" type="text" required></div>
+        <div class="field"><label for="company">Company *</label><input id="company" name="company" type="text" required></div>
+        <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required></div>
+        <div class="field"><label for="country">Country *</label><input id="country" name="country" type="text" required></div>
+        <div class="field"><label for="message">Inquiry Message *</label><textarea id="message" name="message" rows="6" required></textarea></div>
+        <div class="field"><button type="submit" class="btn btn-solid full">Submit Inquiry</button></div>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-block">
+        <h4>Location</h4>
+        <ul class="footer-links">
+            <li>Pulse Tobacco Enterprise FZ-LLC</li>
+            <li>Compass Building, As Shohada Road</li>
+            <li>Al Hamra Industrial Zone - FZ</li>
+            <li>Ras Al Khaimah, United Arab Emirates</li>
+        </ul>
+      </div>
+      <div class="footer-block">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#tobacco-types">Products</a></li>
+          <li><a href="#about">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-block">
+        <h4>Contact</h4>
+        <ul class="footer-links contact-links">
+            <li><a href="mailto:jwojahn@pulsetobacco.com"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/></svg> <span>jwojahn@pulsetobacco.com</span></a></li>
+            <li><a href="tel:+971558863357"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> <span>+971 55 886 3357</span></a></li>
+            <li><a href="https://wa.me/971558863357" target="_blank" rel="noopener"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> <span>WhatsApp</span></a></li>
+            <li><a href="https://www.linkedin.com/company/pulse-tobacco-enterprise-fz-llc/" target="_blank" rel="noopener"><svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zm-7 8.29c1.48 0 2.7.92 3.14 2.15h.02V11h3.3v7.38h-3.48V14.8c0-1.12-.56-1.88-1.62-1.88-1.21 0-1.75.82-1.75 1.85v3.61H7.8v-7.38h3.48v1.51s.48-1.02 1.72-1.22zM5.7 7.72a1.77 1.77 0 0 0 0 3.53h.01a1.77 1.77 0 0 0 0-3.53zm-1.85 2.6h3.7v7.38h-3.7z"/></svg> <span>LinkedIn</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Pulse Tobacco Enterprise FZ-LLC. All rights reserved.<br>Website by Bruno Wojahn</div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <script src="main.js" type="module"></script>
+</body>
+</html>

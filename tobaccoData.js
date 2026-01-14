@@ -1,0 +1,9 @@
+export const tobaccoData = [
+  {id:'fcv', name:'Flue-Cured Virginia', abbrev:'FCV', description:'Premium flue-cured tobacco with balanced flavor and texture. Primary choice for cigarettes.', sourcingRegions:['Brazil','India','Zimbabwe','Tanzania'], useCases:['Cigarettes','Blending']},
+  {id:'acb', name:'Air-Cured Burley', abbrev:'ACB', description:'Air-cured burley with robust character. Known for excellent absorption and burning properties.', sourcingRegions:['Malawi','Brazil','United States'], useCases:['Cigarettes','Pipe tobacco']},
+  {id:'dac', name:'Dark Air-Cured', abbrev:'DAC', description:'Rich, full-bodied dark air-cured tobacco. Deep flavor profile with traditional processing.', sourcingRegions:['Philippines','Indonesia','Brazil'], useCases:['Cigars','Chewing tobacco']},
+  {id:'dfc', name:'Dark Fired Cured', abbrev:'DFC', description:'Intensely flavored dark fired cured tobacco. Smoky, robust character with traditional fire-curing process.', sourcingRegions:['United States','Malawi','Zimbabwe'], useCases:['Snuff','Chewing tobacco','Pipe tobacco']},
+  {id:'oriental', name:'Oriental', abbrev:'ORIENTAL', description:'Aromatic oriental tobacco with distinctive flavor profile. Known for its unique taste and aroma characteristics.', sourcingRegions:['Turkey','Greece','Bulgaria','Macedonia'], useCases:['Cigarettes','Blending','Premium products']},
+  {id:'stems', name:'Stems', abbrev:'STEMS', description:'Processed tobacco stems. Cost-effective filler material with consistent quality.', sourcingRegions:['Multiple sourcing regions'], useCases:['Filler','Processing']},
+  {id:'fines', name:'Fines', abbrev:'FINES', description:'Premium tobacco fines. Fine-grade material for specialized applications.', sourcingRegions:['Multiple sourcing regions'], useCases:['Specialized products','Processing']}
+];
