@@ -1,0 +1,83 @@
+:root{
+  --navy-dark:#051421;
+  --navy-light:#091c38;
+  --gold:#caa03a;
+  --gold-muted:#b38f46;
+  --offwhite:#f8f8f6;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("imgs/pexels-nc-farm-bureau-mark-2257524.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--offwhite);
+  scroll-behavior: smooth;
+}
+
+/* Card */
+.center-card {
+  background: rgba(14, 7, 41, 0.3);
+  backdrop-filter: blur(17px);
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+  padding: 2rem 3rem;
+  min-width: 400px;      /* ensures title fits without wrapping */
+  max-width: 700px;      /* prevents card from being too wide on large screens */
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  white-space: nowrap;   /* prevents wrapping */
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+/* Button container */
+.btn-container {
+  margin-top: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.back-button {
+  color: var(--offwhite);
+  text-decoration: none;
+  background-color: rgba(14,7,41,0.3);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 0.75rem 1.5rem;
+  transition: transform 0.1s ease, background 0.2s ease;
+  display: inline-block;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255,255,255,0.1);
+}
+
+.back-button:active {
+  transform: translateY(3px);
+}

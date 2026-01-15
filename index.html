@@ -59,7 +59,7 @@
     <div class="container">
       <div class="section-head text-center">
         <h2>Tobacco Types</h2>
-        <p>Comprehensive range of premium tobacco products from trusted sourcing regions</p>
+        <p>Comprehensive range of the best quality tobacco products from trusted sourcing regions</p>
       </div>
       <tobacco-strip></tobacco-strip>
     </div>
@@ -83,15 +83,56 @@
         <h2>Contact</h2>
         <p>Get in touch for inquiries about our products and services</p>
       </div>
-      <form id="contact-form" class="contact-form" novalidate>
-        <div class="field"><label for="name">Name *</label><input id="name" name="name" type="text" required></div>
-        <div class="field"><label for="company">Company *</label><input id="company" name="company" type="text" required></div>
-        <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" required></div>
-        <div class="field"><label for="country">Country *</label><input id="country" name="country" type="text" required></div>
-        <div class="field"><label for="message">Inquiry Message *</label><textarea id="message" name="message" rows="6" required></textarea></div>
-        <div class="field"><button type="submit" class="btn btn-solid full">Submit Inquiry</button></div>
-        <p id="form-status" class="form-status" aria-live="polite"></p>
+      <form
+  id="contact-form"
+  class="contact-form"
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  novalidate
+>
+  <!-- Web3Forms Access Key -->
+  <input type="hidden" name="access_key" value="c27e2e0d-055a-4e9b-9108-abdc69915b4d">
+
+  <!-- Redirect after success -->
+  <input type="hidden" name="redirect" value="form-redirect.html">
+  <input type="hidden" name="subject" value="New Website Inquiry">
+  <input type="hidden" name="from_name" value="Pulse Tobacco Website">
+
+  <!-- Spam protection -->
+  <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+        <div class="field">
+          <label for="name">Name *</label>
+          <input id="name" name="name" type="text" required>
+        </div>
+
+        <div class="field">
+          <label for="company">Company *</label>
+          <input id="company" name="company" type="text" required>
+        </div>
+
+        <div class="field">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required>
+        </div>
+
+        <div class="field">
+          <label for="country">Country *</label>
+          <input id="country" name="country" type="text" required>
+        </div>
+
+        <div class="field">
+          <label for="message">Inquiry Message *</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+
+        <div class="field">
+          <button type="submit" class="btn btn-solid full">
+            Submit Inquiry
+          </button>
+        </div>
       </form>
+
     </div>
   </section>
 

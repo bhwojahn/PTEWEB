@@ -36,7 +36,8 @@ class TobaccoStrip extends HTMLElement {
             }
             .type-panel {
               flex: 1;
-              background: rgba(11, 43, 58, 0.7);
+              background: rgba(10, 33, 44, 0.48);
+              backdrop-filter: blur(12px);
               border: 1px solid rgba(179, 143, 70, 0.15);
               position: relative;
               display: flex;
