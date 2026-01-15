@@ -1,0 +1,38 @@
+/* ==========================================
+   CUSTOM CURSOR & RIPPLE EFFECTS
+   ========================================== */
+
+/* Custom Cursor */
+* {
+  cursor: url('/imgs/pointer.svg'), auto !important;
+}
+
+body {
+  cursor: url('/imgs/pointer.svg'), auto !important;
+}
+
+/* Ripple Effect */
+.ripple {
+  position: fixed;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  background: rgba(202, 160, 58, 0.1);
+  animation: ripple-animation 700ms ease-out forwards;
+}
+
+@keyframes ripple-animation {
+  from {
+    width: 0;
+    height: 0;
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  to {
+    width: 120px;
+    height: 120px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

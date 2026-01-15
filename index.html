@@ -8,22 +8,22 @@
   <script src="TobaccoStrip.js" type="module"></script>
   <script src="ProcessSteps.js" type="module"></script>
   <link rel="icon" src="/imgs/symbol.svg"/>
-  
+  <link rel="stylesheet" href="/ripple/ripple.css">
 </head>
 <body>
   <!-- Navigation -->
   <nav id="site-nav" class="nav">
     <div class="container nav-inner">
       <div class="logo" id="home-logo" role="button" tabindex="0">
-        <img src="imgs/Color logo - no background.svg" alt="Pulse Tobacco Enterprise Logo">
+        <img src="imgs/Untitled design.svg" alt="Pulse Tobacco Enterprise Logo">
       </div>
 
       <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation">☰</button>
 
       <div class="nav-links">
-        <button data-target="tobacco-types" class="nav-btn">Products</button>
-        <button data-target="about" class="nav-btn">Process</button>
-        <button data-target="contact" class="nav-btn">Contact</button>
+        <button data-target="tobacco-types" class="nav-btn"><strong>Products</strong></button>
+        <button data-target="about" class="nav-btn"><strong>Process</strong></button>
+        <button data-target="contact" class="nav-btn"><strong>Contact</strong></button>
         <a href="https://wa.me/971558863357" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="wa-link">
           <!-- WhatsApp SVG -->
           <img src="/imgs/icons8-whatsapp.svg" class="icon">
@@ -94,7 +94,7 @@
   <input type="hidden" name="access_key" value="c27e2e0d-055a-4e9b-9108-abdc69915b4d">
 
   <!-- Redirect after success -->
-  <input type="hidden" name="redirect" value="form-redirect.html">
+  <input type="hidden" name="redirect" value="https://pulsetobacco.com/form-redirect.html">
   <input type="hidden" name="subject" value="New Website Inquiry">
   <input type="hidden" name="from_name" value="Pulse Tobacco Website">
 
@@ -174,5 +174,6 @@
   <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">↑</button>
 
   <script src="main.js" type="module"></script>
+  <script src="/ripple/ripple.js" defer></script>
 </body>
 </html>

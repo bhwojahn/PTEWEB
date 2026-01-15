@@ -59,6 +59,7 @@ body {
   background-attachment: fixed;
   position: relative;
   font-weight: 350;
+  cursor: url(imgs/pointer.svg), auto;
 }
 
 body::before {
