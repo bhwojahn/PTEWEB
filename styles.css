@@ -221,31 +221,31 @@ body::before {
   max-width: 90%;
   padding: 40px 24px;
   width: 100%;
+  margin: 0 auto; /* Dead center always */
 }
 
 .hero-title {
   font-weight: 400;
-  font-size: clamp(16px, 4vw, 48px);
+  font-size: clamp(32px, 8vw, 48px);
   color: var(--offwhite);
   line-height: 1.2;
   text-transform: uppercase;
   font-family: "Salaryma";
   margin: 0 auto;
   max-width: 100%;
-  white-space: nowrap;
+  display: block; /* Block forces proper centering */
 }
 
 .hero-sub {
   margin-top: 28px;
   color: rgba(248, 248, 246, 0.82);
-  font-size: clamp(8px, 2vw, 24px);
+  font-size: clamp(16px, 3vw, 24px);
   font-weight: 300;
   text-transform: uppercase;
   font-family: "Salaryma";
-  margin-left: auto;
-  margin-right: auto;
+  margin: 28px auto 0;
   max-width: 100%;
-  white-space: nowrap;
+  display: block; /* Block centering */
 }
 
 .hero-cta {
@@ -255,6 +255,16 @@ body::before {
   justify-content: center;
   flex-wrap: wrap;
 }
+
+
+.btn {
+  padding: clamp(0.875rem, 2vw, 1.125rem) clamp(1.5rem, 3.5vw, 2.25rem);
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  flex: 1;
+  min-width: clamp(120px, 25vw, 180px);
+}
+
+
 
 /* ==========================================
    BUTTONS
@@ -510,11 +520,43 @@ body::before {
 }
 
 /* ==========================================
-   MEDIA QUERIES - MOBILE
-   ========================================== */
+   MEDIA QUERIES - EXACTLY YOUR SPECS
+   ========================================= */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .process-item {
+    flex-direction: row;
+  }
+  .process-item .left {
+    width: 33%;
+  }
+  .process-item .right {
+    width: 67%;
+  }
+}
+
+@media (max-width: 999px) {
+  .hero-title,
+  .hero-sub {
+    white-space: normal; /* WRAP below 1000px */
+  }
+}
 
 @media (max-width: 767px) {
   .hero-content {
     padding: 28px 16px;
+  }
+  
+  .hero-title {
+    font-size: clamp(24px, 10vw, 32px);
+  }
+  
+  .hero-sub {
+    font-size: clamp(14px, 5vw, 18px);
   }
 }
