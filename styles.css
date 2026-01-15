@@ -388,13 +388,20 @@ body::before {
 .footer-inner {
   display: flex;
   justify-content: center;
-  gap: 80px;
+  gap: clamp(20px, 5vw, 80px);
+  flex-wrap: nowrap;
+}
+
+.footer-block {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
 }
 
 .footer-block h4 {
   text-transform: uppercase;
   color: var(--gold-muted);
-  font-size: 12px;
+  font-size: clamp(10px, 2vw, 12px);
   margin-bottom: 12px;
   font-weight: 400;
 }
@@ -406,6 +413,8 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  font-size: clamp(10px, 1.8vw, 14px);
+  align-items: center;
 }
 
 .footer-block a {
@@ -422,6 +431,7 @@ body::before {
   display: flex;
   align-items: center;
   gap: 8px;
+  justify-content: center;
 }
 
 .footer-bottom {
@@ -505,12 +515,5 @@ body::before {
 @media (max-width: 767px) {
   .hero-content {
     padding: 28px 16px;
-  }
-  
-  .footer-inner {
-    align-items: center;
-    text-align: center;
-    gap: 40px;
-    flex-direction: column;
   }
 }
