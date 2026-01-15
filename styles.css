@@ -256,49 +256,46 @@ body::before {
   flex-wrap: wrap;
 }
 
-
 .btn {
-  padding: clamp(0.875rem, 2vw, 1.125rem) clamp(1.5rem, 3.5vw, 2.25rem);
-  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
-  flex: 1;
-  min-width: clamp(120px, 25vw, 180px);
-}
-
-
-
-/* ==========================================
-   BUTTONS
-   ========================================== */
-
-.btn {
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 6px;
+  display: inline-flex; /* fit-content base */
+  padding: 12px 28px; /* Tight, not bloated */
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   font-size: 14px;
-  transition: all 0.2s ease;
-}
-
-.btn:focus {
-  outline: 2px solid var(--gold);
-  outline-offset: 3px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth luxury */
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(202, 159, 58, 0.377);
+  position: relative;
+  transform: translateY(0);
+  min-width: unset; /* Kill flex bloat */
+  width: fit-content; /* Exact your spec */
 }
 
 .btn-outline {
-  background: transparent;
-  border: 1px solid var(--gold-muted);
+  background: rgba(202, 159, 58, 0.377); /* Semi-opaque frosted gold */
   color: var(--gold);
+  box-shadow: 0 8px 32px rgba(202, 159, 58, 0.377);
 }
 
 .btn-solid {
-  background: var(--gold-muted);
-  color: var(--navy-dark);
+  background: rgba(202, 159, 58, 0.377); /* Frosted glass gold */
+  color: var(--gold);
+  box-shadow: 0 8px 32px rgba(202, 159, 58, 0.377);
 }
 
-.btn.full {
-  width: 100%;
+.btn:hover {
+  transform: translateY(-2px); /* Lift on hover */
+  box-shadow: 0 12px 40px rgba(202, 159, 58, 0.377);
 }
+
+.btn:active {
+  transform: translateY(3px); /* Press down */
+  box-shadow: 0 4px 16px rgba(202, 159, 58, 0.377);
+}
+
 
 /* ==========================================
    SECTIONS
